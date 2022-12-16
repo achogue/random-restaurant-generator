@@ -1,0 +1,11 @@
+img {
+    
+}
+
+h1 {
+    color: #d50274;
+    font-family: serif;
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+}
