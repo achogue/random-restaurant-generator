@@ -10,8 +10,15 @@ body {
 
 h1 {
     color: #d85309;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     font-size: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: #d85309;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
 }
