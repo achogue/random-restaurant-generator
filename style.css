@@ -1,9 +1,6 @@
-html {
-    height: 100vh;
-}
-body {
+#hero {
     background-image: url(debby-hudson-pomybSOZsts-unsplash.jpg);
-
+    height: 100vh;
     background-size: cover;
     object-fit: cover;
 }
