@@ -1,10 +1,16 @@
-img {
-    
+html {
+    height: 100vh;;
+}
+body {
+    background-image: url(debby-hudson-pomybSOZsts-unsplash.jpg);
+
+    background-size: cover;
+    object-fit: cover;
 }
 
 h1 {
-    color: #d50274;
-    font-family: serif;
+    color: #d85309;
+    font-family: 'Montserrat', sans-serif;;
     font-size: 55px;
     display: flex;
     justify-content: center;
