@@ -1,23 +1,18 @@
-#hero {
-    background-image: url(debby-hudson-pomybSOZsts-unsplash.jpg);
-    height: 100vh;
-    background-size: cover;
-    object-fit: cover;
-}
 
-h1 {
-    color: #d85309;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 55px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-}
-
-ul li {
-    color: #d85309;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
+#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
