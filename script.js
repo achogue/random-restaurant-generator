@@ -1,3 +1,10 @@
+
+document.getElementById("mainBtn").addEventListener("click", getRestaurant);
+
+function getRestaurant() {
+    document.getElementById("demo").innerHTML = Date();
+
+}
 var randomNumber = 1;
 var simpleBoolean= true; 
 var variableName = document.getElementById('')
