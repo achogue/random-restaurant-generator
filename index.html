@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Finder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="h-full w-auto bg-auto"
-      style="background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80);">
-      
+  <body
+    class="h-full w-auto bg-auto"
+    style="background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80)"
+  >
+    <!-- Headline -->
+
     <h1>Food Finder</h1>
-      
-    <p>I'm hungry!</p> 
-    
-    <div style="padding-top: 500px;">
-        <button id="mainBtn">Feed ME!</button>
-    </div>
 
-    <p id="demo"></p>
+    <p>I'm hungry!</p>
+
+    <div style="padding-top: 500px">
+      <button onclick="getLocation()">Feed Me!</button>
+    </div>
 
     <div id="map"></div>
 
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&callback=initMap&v=weekly"
-                defer>
-            </script>
+    <!-- Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places"></script>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Geolocation -->
+    <script>
+      var x = document.getElementById("demo2");
 
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(initialize);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
