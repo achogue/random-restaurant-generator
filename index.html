@@ -26,24 +26,25 @@
     }
   </script>
   <body>
-    <!-- Headline -->
-    <div class="min-h-full w-full bg-auto"
-      style="background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80)">
-    </div>
 
-    <div class="h-56 grid grid-cols-3 gap-4 place-content-evenly content-center ...">
-      
-      <div>Food Finder</div>
-      
-      <div>
-        <button onclick="getLocation()">Feed Me!</button>
-      </div>
-      
-      <div>Results</div>
-      
-      <div id="map"></div>
+    <!-- Headline -->
+    <h1>
+      <div class="text-5xl text-center text-rose-500 bg-slate-100 bg-gradient-to-r">Food Finder</div>
+    </h1>
+
+    <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
+      class="object-cover bg-center"
+      alt="multi colored empty plates"/>
+
+    <div class="h-56 grid grid-cols-3 gap-4 text-2xl text-rose-500 bg-slate-100 place-content-evenly content-center ...">      
     
+    <div>
+      <button onclick="getLocation()">Feed Me!</button>
     </div>
+      
+    <div>Results</div>
+      
+    <div id="map"></div>
 
     <!-- Places API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places"></script>
