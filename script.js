@@ -34,7 +34,7 @@ function callback(results, status) {
       title: place.name,
       position: place.geometry.location,
     });
-     console.log(place);
+     console.log(place.name);
   }
 
   function getRandomInt(max){
