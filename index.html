@@ -27,17 +27,20 @@
     }
   </script>
   <body>
-    <div class="">
-    <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
-        class="max-h-full w-full object-cover bg-center"
-        alt="multi colored empty plates"/>
+    <div class="bg-gradient-to-r from-slate-100 to-rose-400 h-100 w-auto object-contain mixed-blend-overlay">
+    <!-- <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
+        class="max-h-full w-auto object-cover absolute"
+        alt="multi colored empty plates"/> -->
     <!-- <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
         class="max-h-full w-full object-cover bg-center mix-blend-overlay"
         alt="multi colored empty plates"/> -->
-      <div class="p-25">      
         <h1>
           <div class="text-5xl text-center text-rose-500">Food Finder</div>
-        </h1>      
+        </h1>     
+      <div class="p-25 h-56 grid grid-cols-3 gap-4 content-evenly ...">      
+         <div id="map"
+           class="max-w-full h-auto p-2 border rounded max-w-sm align-middle">
+        </div>
         <h2>
           <button onclick="getLocation()"
               class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -70,9 +73,7 @@
           <input type="radio" name="moneyVal" id="priceLevel4" onclick=localStorVal(this.id)>$$$$</input>
            <br>  
         </h2>         
-        <div id="map"
-           class="max-w-full h-auto p-2 border rounded max-w-sm align-middle">
-        </div>
+
       </div>
     </div>
 
