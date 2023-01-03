@@ -38,9 +38,17 @@
           <div class="text-5xl text-center text-rose-500">Food Finder</div>
         </h1>     
       <div class="p-25 h-56 grid grid-cols-3 gap-4 content-evenly ...">      
-         <div id="map"
-           class="max-w-full h-auto p-2 border rounded max-w-sm align-middle">
+        <div id="map"
+           class="max-w-full h-auto p-2 align-middle">
         </div>
+        <h2 id="priceLevel">
+          <p class="grid grid-cols-1 divide-y">Select your price preference:</p>
+           <input type="radio" name="priceLevel">$</input>
+           <input type="radio" name="priceLevel">$$</input>
+           <input type="radio" name="priceLevel">$$$</input>
+           <input type="radio" name="priceLevel">$$$$</input>
+           <br>  
+        </h2> 
         <h2>
           <button onclick="getLocation()"
               class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -62,16 +70,7 @@
               ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Feed Me!
               </button>
-        </h2>        
-        <h2 id="priceLevel">
-          <p class="grid grid-cols-1 divide-y">Select your price preference:</p>
-           <input type="radio" name="priceLevel">$</input>
-           <input type="radio" name="priceLevel">$$</input>
-           <input type="radio" name="priceLevel">$$$</input>
-           <input type="radio" name="priceLevel">$$$$</input>
-           <br>  
-        </h2>         
-
+        </h2>                
       </div>
     </div>
     <!-- Places API -->
