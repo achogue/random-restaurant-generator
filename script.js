@@ -38,11 +38,7 @@ function callback(results, status) {
       title: place.name,
       position: place.geometry.location,
     });
-<<<<<<< HEAD
-    console.log(place);
-=======
-     console.log(place.name);
->>>>>>> f40d78c8fb720fe8d6d0b030c03442bcec5ebc01
+    console.log(place.name);
   }
 
   function getRandomInt(max) {

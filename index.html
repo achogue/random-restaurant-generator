@@ -27,38 +27,52 @@
     }
   </script>
   <body>
-
-    <!-- Headline -->
-    <h1>
-      <div class="text-5xl text-center text-rose-500 bg-slate-100 bg-gradient-to-r">Food Finder</div>
-    </h1>
-
+    <div class="">
     <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
-      class="object-cover bg-center"
-      alt="multi colored empty plates"/>
-
-    <div class="h-56 grid grid-cols-3 gap-4 text-2xl text-rose-500 bg-slate-100 place-content-evenly content-center ...">      
-    
-    <div>
-    <p>I'm hungry!</p>
-
-    <div style="padding-top: 300px; padding-bottom: 10px">
-      <button onclick="getLocation()">Feed Me!</button>
+        class="max-h-full w-full object-cover bg-center"
+        alt="multi colored empty plates"/>
+    <!-- <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
+        class="max-h-full w-full object-cover bg-center mix-blend-overlay"
+        alt="multi colored empty plates"/> -->
+      <div class="p-25">      
+        <h1>
+          <div class="text-5xl text-center text-rose-500">Food Finder</div>
+        </h1>      
+        <h2>
+          <button onclick="getLocation()"
+              class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+              type="button" class="px-6
+              py-2.5
+              bg-blue-600
+              text-white
+              font-medium
+              text-lg
+              leading-tight
+              uppercase
+              rounded
+              shadow-md
+              hover:bg-blue-700 hover:shadow-lg
+              focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+              active:bg-blue-800 active:shadow-lg
+              transition
+              duration-150
+              ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Feed Me!
+              </button>
+        </h2>        
+        <h2 id="priceLevel">
+          <p class="grid grid-cols-1 divide-y">Select your price preference:</p>
+           <input type="radio" name="priceLevel">$</input>
+           <input type="radio" name="priceLevel">$$</input>
+           <input type="radio" name="priceLevel">$$$</input>
+           <input type="radio" name="priceLevel">$$$$</input>
+           <br>  
+        </h2>         
+        <div id="map"
+           class="max-w-full h-auto p-2 border rounded max-w-sm align-middle">
+        </div>
+      </div>
     </div>
-
-    <div id="priceLevel">
-      <p>Select your price preference:</p>
-      <input type="radio" name="priceLevel">$</input>
-      <input type="radio" name="priceLevel">$$</input>
-      <input type="radio" name="priceLevel">$$$</input>
-      <input type="radio" name="priceLevel">$$$$</input>
-      <br>  
-    </div>
-      
-    <div>Results</div>
-      
-    <div id="map"></div>
-
     <!-- Places API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places&fields=price_level"></script>
 
@@ -77,5 +91,8 @@
 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  
+
+
   </body>
 </html>
