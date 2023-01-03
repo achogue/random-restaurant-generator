@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Finder</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
 
   <body
     class="h-full w-auto bg-auto"
-    style="background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80)"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80);
+    "
   >
     <!-- Headline -->
 
@@ -19,14 +22,23 @@
 
     <p>I'm hungry!</p>
 
-    <div style="padding-top: 500px">
+    <div style="padding-top: 300px; padding-bottom: 10px">
       <button onclick="getLocation()">Feed Me!</button>
+    </div>
+
+    <div id="priceLevel">
+      <p>Select your price preference:</p>
+      <input type="radio" name="priceLevel">$</input>
+      <input type="radio" name="priceLevel">$$</input>
+      <input type="radio" name="priceLevel">$$$</input>
+      <input type="radio" name="priceLevel">$$$$</input>
+      <br>  
     </div>
 
     <div id="map"></div>
 
     <!-- Places API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places&fields=price_level"></script>
 
     <!-- Geolocation -->
     <script>

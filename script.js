@@ -5,39 +5,54 @@ var service;
 var infowindow;
 
 // Map //
- function initialize(position) {
-  var pyrmont = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+function initialize(position) {
+  var pyrmont = new google.maps.LatLng(
+    position.coords.latitude,
+    position.coords.longitude
+  );
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 15
-    });
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: pyrmont,
+    zoom: 15,
+  });
 
   var request = {
     location: pyrmont,
-    radius: '500',
-    query: 'restaurant'
+    radius: "1000",
+    query: "restaurant",
+    fields: "price_level",
   };
 
   service = new google.maps.places.PlacesService(map);
   service.textSearch(request, callback);
 }
 
+
 // Random Restaurant //
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
-
     let place = results[getRandomInt(results.length)];
-    
+
     new google.maps.Marker({
       map,
       title: place.name,
       position: place.geometry.location,
     });
-     console.log(place);
+    console.log(place);
   }
 
-  function getRandomInt(max){
+  function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+
+  // Local Storage //
+
+  var radios = document.getElementsByName("priceLevel");
+  var val = localStorage.getItem("priceLevel");
+
+  for(var i=0; i<radios.length; i++){
+    if(radios[i].value == val){
+      radios[i].checked = true;
+    }
+  } 
 }
