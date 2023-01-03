@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>Random Restaurant Generator</title>
+    <title>Food Finder</title>
   </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
@@ -37,12 +37,13 @@
         </div>
         <h2 id="priceLevel">
           <p class="grid grid-cols-1 divide-y">Select your price preference:</p>
-           <input type="radio" name="priceLevel">$</input>
-           <input type="radio" name="priceLevel">$$</input>
-           <input type="radio" name="priceLevel">$$$</input>
-           <input type="radio" name="priceLevel">$$$$</input>
+          <input type="radio" name="moneyVal" id="priceLevelAny" onclick=localStorVal(this.id) checked="checked">Any price</input>
+          <input type="radio" name="moneyVal" id="priceLevell" onclick=localStorVal(this.id)>$</input>
+          <input type="radio" name="moneyVal" id="priceLevel2" onclick=localStorVal(this.id)>$$</input>
+          <input type="radio" name="moneyVal" id="priceLevel3" onclick=localStorVal(this.id)>$$$</input>
+          <input type="radio" name="moneyVal" id="priceLevel4" onclick=localStorVal(this.id)>$$$$</input>
            <br>  
-        </h2> 
+        </h2>   
         <h2>
           <button onclick="getLocation()"
               class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-lg leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -64,9 +65,21 @@
               ease-in-out">
               Feed Me!
           </button>
-        </h2>                
+        </h2>
       </div>
     </div>
+
+       <!-- Modal-->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>No results found.</p>
+      </div>    
+    </div>
+
+      
+    <div id="map"></div>
+
     <!-- Places API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl4UcXNeQGoJ4Q4FczXAsiECrd2Mb6h6Y&libraries=places&fields=price_level"></script>
 
