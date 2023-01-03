@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>Random Restaurant Generator</title>
+    <title>Food Finder</title>
   </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
@@ -48,11 +48,22 @@
 
     <div id="priceLevel">
       <p>Select your price preference:</p>
-      <input type="radio" name="priceLevel">$</input>
-      <input type="radio" name="priceLevel">$$</input>
-      <input type="radio" name="priceLevel">$$$</input>
-      <input type="radio" name="priceLevel">$$$$</input>
+      <input type="radio" name="moneyVal" id="priceLevelAny" onclick=localStorVal(this.id) checked="checked">Any price</input>
+      <input type="radio" name="moneyVal" id="priceLevell" onclick=localStorVal(this.id)>$</input>
+      <input type="radio" name="moneyVal" id="priceLevel2" onclick=localStorVal(this.id)>$$</input>
+      <input type="radio" name="moneyVal" id="priceLevel3" onclick=localStorVal(this.id)>$$$</input>
+      <input type="radio" name="moneyVal" id="priceLevel4" onclick=localStorVal(this.id)>$$$$</input>
       <br>  
+    </div>
+
+       <!-- Modal-->
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>No results found.</p>
+      </div>
+    
     </div>
       
     <div>Results</div>
