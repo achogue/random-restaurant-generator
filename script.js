@@ -5,7 +5,6 @@ var service;
 var infowindow;
 var priceVal = 0;
 
-
 // Map //
 function initialize(position) {
   var pyrmont = new google.maps.LatLng(
@@ -36,6 +35,7 @@ function callback(results, status) {
     let priceFilter;
 
     if (priceVal != 0) {
+      
       priceFilter = results.filter((pF) => pF.price_level == priceVal);
 
       if (priceFilter.length != 0) {
@@ -46,34 +46,32 @@ function callback(results, status) {
           position: place.geometry.location,
         });
       }
-      // Display "No Results" with a Modal 
+      // Display "No Results" with a Modal
       else {
         var modal = document.getElementById("myModal");
         var span = document.getElementsByClassName("close")[0];
-
+  
         modal.style.display = "block";
-
-        span.onclick = function() {
+  
+        span.onclick = function () {
           modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
+        };
+  
+        window.onclick = function (event) {
           if (event.target == modal) {
             modal.style.display = "none";
           }
-        }
+        };
       }
-    } else {
-      place = results[getRandomInt(results.length)];
-      new google.maps.Marker({
-        map,
-        title: place.name,
-        position: place.geometry.location,
-      });
     }
-    console.log(place)
-
-
+  } 
+  else {
+    place = results[getRandomInt(results.length)];
+    new google.maps.Marker({
+      map,
+      title: place.name,
+      position: place.geometry.location,
+    });
   }
 }
 
@@ -90,8 +88,8 @@ $(document).ready(function () {
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].id == val) {
       radios[i].checked = true;
-      console.log(val)
-      
+      console.log(val);
+
       switch (radios[i].id) {
         case "priceLevelAny":
           priceVal = 0;
@@ -108,11 +106,10 @@ $(document).ready(function () {
         case "priceLevel4":
           priceVal = 4;
           break;
-      };
+      }
     }
   }
-})
-
+});
 
 // Local storage based on value of radio ID
 function localStorVal(radioId) {
