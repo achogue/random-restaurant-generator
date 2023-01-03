@@ -5,21 +5,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Finder</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Random Restaurant Generator</title>
   </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <body>
 
-  <body
-    class="h-full w-auto bg-auto"
-    style="
-      background-image: url(https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80);
-    "
-  >
     <!-- Headline -->
+    <h1>
+      <div class="text-5xl text-center text-rose-500 bg-slate-100 bg-gradient-to-r">Food Finder</div>
+    </h1>
 
-    <h1>Food Finder</h1>
+    <img src="timo-c-dinger-DjOco3qncig-unsplash.jpg"
+      class="object-cover bg-center"
+      alt="multi colored empty plates"/>
 
+    <div class="h-56 grid grid-cols-3 gap-4 text-2xl text-rose-500 bg-slate-100 place-content-evenly content-center ...">      
+    
+    <div>
     <p>I'm hungry!</p>
 
     <div style="padding-top: 300px; padding-bottom: 10px">
@@ -34,7 +54,9 @@
       <input type="radio" name="priceLevel">$$$$</input>
       <br>  
     </div>
-
+      
+    <div>Results</div>
+      
     <div id="map"></div>
 
     <!-- Places API -->
@@ -54,5 +76,6 @@
     </script>
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
